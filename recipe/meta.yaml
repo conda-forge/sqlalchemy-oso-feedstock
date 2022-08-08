@@ -1,4 +1,4 @@
-{% set version = "0.26.1" %}
+{% set version = "0.26.2" %}
 
 package:
   name: sqlalchemy-oso
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/osohq/oso/archive/refs/tags/sqlalchemy-v{{ version }}.tar.gz
-  sha256: 121d1b420c17250d57253d84004dcb7c8087579436c86a60f701a139e4781064
+  sha256: 3d191576da9973641f27d3ceaa9365975bb3e08ae200313c960c21ac4670a066
 
 build:
   noarch: python
@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://github.com/osohq/oso/tree/main/languages/python/sqlalchemy-oso
-  summary: 'sqlalchemy-oso the SqlAlchemy integration for oso, the batteries-included framework for building authorization in your application.'
+  summary: sqlalchemy-oso the SqlAlchemy integration for oso, the batteries-included framework for building authorization in your application.
   license: Apache-2.0
   license_file: LICENSE
   doc_url: https://docs.osohq.com/python/reference/api/sqlalchemy.html
