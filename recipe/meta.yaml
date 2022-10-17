@@ -1,4 +1,4 @@
-{% set version = "0.26.2" %}
+{% set version = "0.26.3" %}
 
 package:
   name: sqlalchemy-oso
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/osohq/oso/archive/refs/tags/sqlalchemy-v{{ version }}.tar.gz
-  sha256: 3d191576da9973641f27d3ceaa9365975bb3e08ae200313c960c21ac4670a066
+  sha256: 812b4a6aab77e77d9f6b1a3585bb83ae0415609b3b1d15770ba7666d576b2c19
 
 build:
   noarch: python
