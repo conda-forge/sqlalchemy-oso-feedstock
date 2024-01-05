@@ -37,6 +37,7 @@ test:
     - mypy
     - pip
     - pytest-cov
+    - flask <3
     - flask-sqlalchemy <3
     # fails pip check: https://github.com/conda-forge/importlib_metadata-feedstock/issues/88
     - importlib-metadata !=4.7.1
