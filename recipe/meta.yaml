@@ -11,7 +11,7 @@ source:
 build:
   noarch: python
   script:
-    - cd languages/python/sqlalchemy-oso && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolaiton
+    - cd languages/python/sqlalchemy-oso && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -33,7 +33,7 @@ test:
     - pip check
     - mypy -p sqlalchemy_oso --ignore-missing-imports
     - cd languages/python/sqlalchemy-oso
-    - coverage run --source sqlalchemy_oso --branch -m pytest tests --tb=long --color=yess
+    - coverage run --source sqlalchemy_oso --branch -m pytest -vv --tb=long --color=yes
     - coverage report --show-missing --skip-covered --fail-under=81
   requires:
     - mypy
@@ -41,8 +41,6 @@ test:
     - pytest-cov
     - flask <2.2
     - flask-sqlalchemy <3.0
-    # fails pip check: https://github.com/conda-forge/importlib_metadata-feedstock/issues/88
-    - importlib-metadata !=4.7.1
 
 about:
   home: https://github.com/osohq/oso/tree/main/languages/python/sqlalchemy-oso
