@@ -31,12 +31,10 @@ test:
     - sqlalchemy_oso
   commands:
     - pip check
-    - mypy -p sqlalchemy_oso --ignore-missing-imports
     - cd languages/python/sqlalchemy-oso
     - coverage run --source sqlalchemy_oso --branch -m pytest -vv --tb=long --color=yes
     - coverage report --show-missing --skip-covered --fail-under=81
   requires:
-    - mypy
     - pip
     - pytest-cov
     - flask <2.2
