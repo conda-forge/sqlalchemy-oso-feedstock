@@ -12,16 +12,16 @@ build:
   noarch: python
   script:
     - cd languages/python/sqlalchemy-oso && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - oso >=0.27.0,<0.28.0
     - packaging >=21.3,<24.0
-    - python >=3.7
+    - python >={{ python_min }}
     - sqlalchemy >=1.3.17,<3.0
 
 test:
@@ -40,6 +40,7 @@ test:
     - pip
     - pytest-cov
     - werkzeug ==2.2.2
+    - python {{ python_min }}
 
 about:
   home: https://github.com/osohq/oso/tree/main/languages/python/sqlalchemy-oso
